@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Практика 4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo" href="#">Vladimir Fomin</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+          <span class="nav-toggle__label">Меню</span>
+        </button>
+
+        <nav class="nav" aria-label="Основная навигация" id="primary-nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">О проекте</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">Адаптивная вёрстка</h1>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="container">
+          <h2 class="content-grid__title">Наши направления</h2>
+
+          <div class="content-grid__container">
+            <article class="content-card">
+              <h3 class="content-card__title">Направление 1</h3>
+              <p class="content-card__text">Описание первого направления деятельности.</p>
+            </article>
+
+            <article class="content-card">
+              <h3 class="content-card__title">Направление 2</h3>
+              <p class="content-card__text">Описание второго направления деятельности.</p>
+            </article>
+
+            <article class="content-card">
+              <h3 class="content-card__title">Направление 3</h3>
+              <p class="content-card__text">Описание третьего направления деятельности.</p>
+            </article>
+
+            <article class="content-card">
+              <h3 class="content-card__title">Направление 4</h3>
+              <p class="content-card__text">Описание четвёртого направления деятельности.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="masonry-grid">
+        <div class="container">
+          <h2 class="masonry-grid__title">Дополнительные материалы</h2>
+
+          <div class="masonry-grid__container">
+            <article class="masonry-item masonry-item--short">
+              <h3 class="masonry-item__title">Краткий материал</h3>
+              <p class="masonry-item__text">Короткое описание.</p>
+            </article>
+
+            <article class="masonry-item masonry-item--tall">
+              <h3 class="masonry-item__title">Подробный материал</h3>
+              <p class="masonry-item__text">
+                Развёрнутое описание с дополнительной информацией и деталями реализации.
+              </p>
+            </article>
+
+            <article class="masonry-item">
+              <h3 class="masonry-item__title">Стандартный материал</h3>
+              <p class="masonry-item__text">Обычное описание материала средней длины.</p>
+            </article>
+
+            <article class="masonry-item masonry-item--very-tall">
+              <h3 class="masonry-item__title">Обширный материал</h3>
+              <p class="masonry-item__text">
+                Полное описание со всеми техническими характеристиками, особенностями применения и
+                рекомендациями по использованию в различных условиях.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <small class="footer__copy">© 2026</small>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+
+      navToggle?.addEventListener("click", () => {
+        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!isExpanded));
+        nav?.classList.toggle("nav--open");
+      });
+    </script>
+  </body>
+</html>
